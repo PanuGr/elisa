@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="fi">
-<title>W3.CSS Template</title>
+<title>Elisan blogi</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-family: "Raleway", sans-serif;
-    }
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="Elisa Stenberg" />
 
 <body class="w3-light-grey">
     <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
-    <div class="w3-content" style="max-width: 1400px">
+    <div class="w3-content">
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
             <h1><b>Elisan Antologia</b></h1>
@@ -30,11 +26,12 @@ and is wrapped around the whole page content, except for the footer in this exam
             <!-- Blog entries -->
             <section class="w3-col l8 s12">
                 <!-- Blog entry -->
-                <article class="w3-card-4 w3-margin w3-white">
-                    <img src="" alt="Book's cover" style="width: 100%" />
+                <script id="template" type="text/x-handlebars-template">
+                    <article class="w3-card-4 w3-margin w3-white">
+                    <img src="" alt="Book's cover" />
                     <div class="w3-container">
-                        <h3><b>Otsikko</b></h3>
-                        <h5>Kirjan kuvaus, <span class="w3-opacity">päivämäärä</span></h5>
+                        <h2><b>Otsikko</b></h2>
+                        <h3>Kirjan kuvaus, <span class="w3-opacity">päivämäärä</span></h3>
                     </div>
                     <div class="w3-container">
                         <p>Book's intro....</p>
@@ -46,49 +43,27 @@ and is wrapped around the whole page content, except for the footer in this exam
                                     </button>
                                 </p>
                             </div>
-                            <div class="w3-col m4 w3-hide-small">
-                                <p>
-                                    <span class="w3-padding-large w3-right"><b>Share links</b></span>
-                                </p>
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style w3-col m4 w3-padding-16 w3-small"
+                                data-a2a-title="Elisa blogi"
+                                data-a2a-url="https://panagiotis.netlify.app">>
+                                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_facebook_messenger"></a>
+                                <a class="a2a_button_whatsapp"></a>
                             </div>
                         </div>
                     </div>
                 </article>
+                
+                </script>
                 <hr />
-
-                <!-- Blog entry -->
-                <article class="w3-card-4 w3-margin w3-white">
-                    <img src="" alt="Another cover" style="width: 100%" />
-                    <div class="w3-container">
-                        <h3><b>Kirjan Otsikko</b></h3>
-                        <h5>Kirjan kuvaus, <span class="w3-opacity">päivämäärä</span></h5>
-                    </div>
-                    <div class="w3-container">
-                        <p>Teksti...</p>
-                        <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                                <p>
-                                    <button class="w3-button w3-padding-large w3-white w3-border">
-                                        <b>Lue lisää...</b>
-                                    </button>
-                                </p>
-                            </div>
-                            <div class="w3-col m4 w3-hide-small">
-                                <p>
-                                    <span class="w3-padding-large w3-right"><b>Share links  </b></span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
                 <!-- END BLOG ENTRIES -->
             </section>
-
             <!-- Introduction menu -->
             <section class="w3-col l4">
                 <!-- About Card -->
                 <div class="w3-card w3-margin w3-margin-top">
-                    <img src="/w3images/avatar_g.jpg" alt="Elisa Stenberg, profile photo" style="width: 100%" />
+                    <img src="" alt="Elisa Stenberg, profile photo" />
                     <div class="w3-container w3-white">
                         <h4><b>Elisa Stenberg</b></h4>
                         <p>
@@ -99,48 +74,40 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </div>
                 </div>
                 <hr />
-
                 <!-- Posts -->
                 <div class="w3-card w3-margin">
                     <div class="w3-container w3-padding">
                         <h4>Viimeisimmät artikkelit</h4>
                     </div>
                     <ul class="w3-ul w3-hoverable w3-white">
+                        <script id="template2" type="text/x-handlebars-template">
                         <li class="w3-padding-16">
-                            <img src="" alt="Image" class="w3-left w3-margin-right" style="width: 50px" />
+                            <img src="" alt="Image" class="w3-left w3-margin-right" />
                             <span class="w3-large">Otsikko</span><br />
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="" alt="Image" class="w3-left w3-margin-right" style="width: 50px" />
-                            <span class="w3-large">Otsikko</span><br />
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="" alt="Image" class="w3-left w3-margin-right" style="width: 50px" />
-                            <span class="w3-large">Otsikko</span><br />
-                        </li>
-                        <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-                            <img src="" alt="Image" class="w3-left w3-margin-right" style="width: 50px" />
-                            <span class="w3-large">Otsikko</span><br />
-                        </li>
+                        </li></script>
                     </ul>
                 </div>
-                <hr />
 
+                <hr />
                 <!-- END Introduction Menu -->
             </section>
-
             <!-- END GRID -->
         </main>
         <br />
         <!-- END w3-content -->
     </div>
-    <!-- Footer -->
     <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-        <p>
-            Powered by
-            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-        </p>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style " data-a2a-title="Elisa blogi">
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_facebook_messenger"></a>
+            <a class="a2a_button_whatsapp"></a>
+        </div>
     </footer>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="main.js" defer>
+    </script>
 </body>
 
 </html>

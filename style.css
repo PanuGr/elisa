@@ -1,0 +1,22 @@
+*{box-sizing: border-box;}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
+}
+
+.w3-content {
+  max-width: 1400px;
+}
+img {
+  width: 100%;
+}
+li img {
+  width: 50%;
+}
