@@ -1,22 +1,12 @@
 const content = {
-    content: [
+    writings: [
         {
-
-            title: 'History',
-            description: 'Kirjan kuvaus',
+            title: 'A',
+            description: 'Elisa Stenberg, Hyvän Kukkia, 2009, Jamilahden kansanopisto',
             date: '7.01.2021',
             imgSrc: 'background/felipepelaquim-InpSZCpwS7g-unsplash.webp',
             link: '',
-
-            text: 'aaaaaaa'
+            text: "Valkoisen paperin edessä, <br> olen kirjoittanut jo rivin,<br> mutta kirjaimet eivät näy,<br> olen varmasti sokea, <br>tästä maailmasta, <br>en kuule enkä haista,<br> A-kirjamen sellissä,<br> nälkäisenä,<br> itseni seuralaisena,<br> pidän tiimalasia kädessä. "
         },
-        {
-            title: 'art',
-            description: 'Kirjan kuvaus',
-            date: '17.01.2021',
-            imgSrc: 'background/joceline-m-huitzil-3bX5yrvFgKk-unsplash.webp',
-            link: '',
-            text: 'ssssssss'
-        }
     ]
 };
