@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Täältä voit lukea Elisan kirjoituksia" />
+  <meta name="keywords" content="Elisa Stenberg, kirjoituksia, blogi" />
   <meta name="author" content="Elisa Stenberg" />
 </head>
 
@@ -28,7 +28,7 @@
         <!-- Blog entry -->
         <script id="template" type="text/x-handlebars-template">
             {{#each content  }}
-              <article class="w3-card-4 w3-margin w3-white">
+              <article class="w3-card-4 w3-margin w3-sand">
                 <img src="assets/{{imgSrc}}" alt="Book's cover" loading="lazy" width="100%" height="500px" />
                 <div class="w3-container">
                   <h2>
@@ -81,27 +81,40 @@
         <!-- END BLOG ENTRIES -->
       </section>
       <!-- Introduction menu -->
-      <section class="w3-col l4">
+      <section class="w3-col l4 ">
         <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-          <img class="w3-circle w3-margin-bottom" id="profilePhoto" src="assets/background/oleksandra-bardash-6rRLtMcEnzg-unsplash.webp" alt="Elisa Stenberg, profile photo" width="100%" height="250px"
-            oncontextmenu="false" loading="lazy" />
-          <div class="w3-container w3-white">
+        <div class="w3-card w3-margin w3-margin-top w3-sand">
+          <img class="w3-circle w3-margin-bottom" id="profilePhoto"
+            src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/18056771_10155390098399101_3831294978654016809_n.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=W3iL4jlVUtAAX8Mvtzm&_nc_ht=scontent-arn2-1.xx&oh=54a12886ad6034ea5301cd8e005f9944&oe=601C3BB6"
+            alt="Elisa Stenberg, profile photo" width="100%" height="250px" oncontextmenu="false" loading="lazy" />
+          <div class="w3-container w3-sand">
             <h4><strong>Elisa Stenberg</strong></h4>
             <p>
-              Just me, myself and I, exploring the universe of uknownment. I
-              have a heart of love and a interest of bla,bla blog. I want to
-              share my world with you.
+              Tervetuloa lukemaan tekstejäni! <br> Olen Elisa Stenberg ja olen opiskellut luovaa kirjoittamista
+              Jamilahden
+              kansanopistossa sekä
+              Kauniaisissa Työväen Akatemiassa. Olen kirjoittanut myös näytelmän <em>"Minä ja Hugo Simberg"</em> , jonka
+              on
+              esittänyt Haminan Hywät Wanhat asukkaat
+              keväällä 2013. Lisäsksi tekstejäni on ollut muutamassa lehdessä. Toivottavasti viihdyt tekstejeni parissa!
+            </p>
+            <p>
+              Welcome! <br> I'm Elisa Stenberg and I have studied creative writing in Jamilahti folk-high
+              school as well as in the Työväen Academy of Kauniainen. I have also written the play <em> "Me and Hugo
+                Simberg"</em>,
+              which was presented in Hamina Hywät Wanhat asukkaat in the spring of 2013. Furthemore my texts have been
+              in a
+              few magazines. I hope you enjoy my writings!
             </p>
           </div>
         </div>
         <hr />
         <!-- Posts -->
-        <div class="w3-card w3-margin">
-          <div class="w3-container w3-padding w3-white">
+        <div class="w3-card w3-margin w3-sand">
+          <div class="w3-container w3-padding">
             <h4>Viimeisimmät artikkelit</h4>
           </div>
-          <ul class="w3-ul w3-hoverable w3-white">
+          <ul class="w3-ul w3-hoverable">
             <script id="template2" type="text/x-handlebars-template">
               {{#each content}}
                 <li class="w3-padding-16">
@@ -113,9 +126,9 @@
                     width="100%"
                     height="250px"
                   />
-                  <aside class="w3-large">
+                  <h3 class="w3-large">
                     {{title}}
-                  </aside>
+                  </h3>
                   <br />
                 </li>
                 {{/each}}
