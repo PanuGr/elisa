@@ -16,9 +16,16 @@ const articleID = urlParams.get('id')
 
 const source = document.getElementById("template").innerHTML; //get the template
 const templateBlog = Handlebars.compile(source);
-const compiledHtml = templateBlog(content); //fill the template with our info
-const fill = document.getElementsByTagName("section")[0]; // add the filled template in destination
-fill.innerHTML = compiledHtml;
+if (document.getElementById('article-details')) {
+    const compiledHtml = templateBlog(content.content[articleID]);
+    const fill = document.getElementsByTagName("main")[0]; // add the filled template in destination
+    fill.innerHTML = compiledHtml;
+} else {
+    const compiledHtml = templateBlog(content); //fill the template with our info
+    const fill = document.getElementsByTagName("section")[0]; // add the filled template in destination
+    fill.innerHTML = compiledHtml;
+
+}
 if (document.getElementById("template2")) {
     const source2 = document.getElementById("template2").innerHTML;
     const blogList = Handlebars.compile(source2);
