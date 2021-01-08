@@ -1,5 +1,5 @@
 const backgroundUrl = [
-    "felipepelaquim-InpSZCpwS7g-unsplash.webp", 'annie-spratt-nCn9gE5-1wU-unsplash.webp', 'evie-s-SxEhEk9O2H0-unsplash.webp',
+    "felipepelaquim-InpSZCpwS7g-unsplash.webp", '/assets/background/annie-spratt-nCn9gE5-1wU-unsplash.webp', 'evie-s-SxEhEk9O2H0-unsplash.webp',
     'joceline-m-huitzil-3bX5yrvFgKk-unsplash.webp', 'oleksandra-bardash-6rRLtMcEnzg-unsplash.webp', 'pawel-czerwinski-giIUmmihDFA-unsplash.webp',
     'priscilla-du-preez-5mgtTFa7Y3M-unsplash.webp', 'priscilla-du-preez-K1-mGLwGJJE-unsplash.webp', 'priscilla-du-preez-KeUHnTJ78fY-unsplash.webp',
     'priscilla-du-preez-yS13_sGYElg-unsplash.webp', 'zoltan-tasi-vds0LlvYe58-unsplash.webp'
@@ -41,6 +41,6 @@ a2a_config.onclick = 1;
 a2a_config.num_services = 2;
 
 //RANDOM BACKGROUND
-document.getElementsByTagName('body')[0].style.backgroundImage = `url(/assets/bookCover/${backgroundUrl[randomNum()]} ) `
+document.getElementsByTagName('body')[0].style.backgroundImage = `url(${backgroundUrl[1]} ) `
 
 
