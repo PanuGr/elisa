@@ -10,3 +10,5 @@ const content = {
         },
     ]
 };
+
+let shareUrl =`https://${window.location.host}/${window.location.pathname}${window.location.search } ` ; 
