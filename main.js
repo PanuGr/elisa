@@ -42,8 +42,8 @@ var a2a_config = {
 };
 if (document.getElementById('article-details')) {
     a2a_config.linkurl = location.href
-    document.querySelector('meta[name="description"]').setAttribute("content",`Täältä voit lukea kirjoitukseni nimeltään: ${content.writings[articleID].title}`);
-    document.querySelector('meta[name="image"]').setAttribute("content",`assets/${content.writings[articleID].imgSrc}`);
+    document.querySelector('meta[name="description"]').setAttribute("content", `Täältä voit lukea kirjoitukseni nimeltään: ${content.writings[articleID].title}`);
+    document.querySelector('meta[name="image"]').setAttribute("content", `assets/${content.writings[articleID].imgSrc}`);
 }
 
 //RANDOM BACKGROUND
