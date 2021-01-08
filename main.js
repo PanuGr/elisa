@@ -40,6 +40,11 @@ var a2a_config = {
     onclick: 1,
     num_services: 2,
 };
+if (document.getElementById('article-details')) {
+    a2a_config.linkurl = location.href
+    document.querySelector('meta[name="description"]').setAttribute("content",`Täältä voit lukea Elisan kirjoitukseni nimeltään: ${content.writings[articleID].title}`);
+    document.querySelector('meta[name="image"]').setAttribute("content",`assets/${content.writings[articleID].imgSrc}`);
+}
 
 //RANDOM BACKGROUND
 document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
