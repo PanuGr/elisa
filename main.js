@@ -43,4 +43,3 @@ var a2a_config = {
 
 //RANDOM BACKGROUND
 document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
-document.querySelector('meta[property="og:image"]').setAttribute("content", `./assets/background/${backgroundUrl[randomNum()]}`);
