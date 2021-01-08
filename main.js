@@ -1,8 +1,8 @@
 const backgroundUrl = [
-    "felipepelaquim-InpSZCpwS7g-unsplash.webp", '/assets/background/annie-spratt-nCn9gE5-1wU-unsplash.webp', 'evie-s-SxEhEk9O2H0-unsplash.webp',
-    'joceline-m-huitzil-3bX5yrvFgKk-unsplash.webp', 'oleksandra-bardash-6rRLtMcEnzg-unsplash.webp', 'pawel-czerwinski-giIUmmihDFA-unsplash.webp',
-    'priscilla-du-preez-5mgtTFa7Y3M-unsplash.webp', 'priscilla-du-preez-K1-mGLwGJJE-unsplash.webp', 'priscilla-du-preez-KeUHnTJ78fY-unsplash.webp',
-    'priscilla-du-preez-yS13_sGYElg-unsplash.webp', 'zoltan-tasi-vds0LlvYe58-unsplash.webp'
+    "felipe.webp", 'annie.webp', 'evie.webp',
+    'joceline.webp', 'oleksandra.webp', 'pawel.webp',
+    'priscilla.webp', 'priscilla1.webp', 'priscilla2.webp',
+    'priscilla3.webp', 'zoltan.webp'
 ];
 const randomNum = () => {
     return Math.floor(Math.random() * backgroundUrl.length)
@@ -41,6 +41,6 @@ a2a_config.onclick = 1;
 a2a_config.num_services = 2;
 
 //RANDOM BACKGROUND
-document.getElementsByTagName('body')[0].style.backgroundImage = `url(${backgroundUrl[1]} ) `
+document.getElementsByTagName('body')[0].style.backgroundImage = `url(/assets/background/${backgroundUrl[randomNum()]} ) `
 
 
