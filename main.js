@@ -35,10 +35,11 @@ if (document.getElementById("template2")) {
 
 
 //SHARE
-var a2a_config = a2a_config || {};
-a2a_config.locale = "fi";
-a2a_config.onclick = 1;
-a2a_config.num_services = 2;
+var a2a_config = {
+    locale:'fi',
+    onclick:1,
+    num_services:2,
+};
 
 //RANDOM BACKGROUND
 document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
