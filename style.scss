@@ -31,11 +31,16 @@ img {
   height: 500px;
   object-fit: cover;
   object-position: center;
+  pointer-events: none;
 }
 p {
   font-size: clamp(13px, 1.1vw, 4rem);
   max-inline-size: 75ch;
 }
+a:hover {
+  text-decoration: none;
+}
+
 article {
   p {
     white-space: nowrap;
