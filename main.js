@@ -41,6 +41,6 @@ a2a_config.onclick = 1;
 a2a_config.num_services = 2;
 
 //RANDOM BACKGROUND
-document.getElementsByTagName('body')[0].style.backgroundImage = `url(/assets/background/${backgroundUrl[randomNum()]} ) `
+document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
 
 
