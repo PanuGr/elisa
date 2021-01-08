@@ -36,12 +36,11 @@ if (document.getElementById("template2")) {
 
 //SHARE
 var a2a_config = {
-    locale:'fi',
-    onclick:1,
-    num_services:2,
+    locale: 'fi',
+    onclick: 1,
+    num_services: 2,
 };
 
 //RANDOM BACKGROUND
 document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
-
-
+document.querySelector('meta[property="og:image"]').setAttribute("content", `./assets/background/${backgroundUrl[randomNum()]}`);
