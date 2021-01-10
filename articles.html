@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet preload" href="https://www.w3schools.com/w3css/4/w3.css" media="all" />
+  <link rel="preload" as="style" href="https://www.w3schools.com/w3css/4/w3.css" media="all"
+    onload="this.rel='stylesheet'" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet" />
-  <link rel="stylesheet preload" href="css/style.css" media="all" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap"
+    rel="stylesheet prefetch" />
+  <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'" />
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   <meta name="author" content="Elisa Stenberg" />
   <meta name="description" property="og:description" content="Täältä voit lukea kirjoitukseni" />
   <meta name="image" property="og:image" content="assets/background/annie.webp" />
   <title>Elisan blogi</title>
   <style>
+      body {
+      font-family: "Montserrat", sans-serif;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: black;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    h1 {
+      color: #ffdddd
+    }
+
     article p {
       white-space: normal;
     }
   </style>
 </head>
-
 <body id="article-details">
   <header class="w3-container w3-center w3-padding-32 w3-text-white">
     <h1>
@@ -30,13 +49,15 @@
   <main>
     <script id="template" type="text/x-handlebars-template">
         <article class="w3-card-4 w3-margin w3-sand">
-          <img
+          <picture>
+            <source media="(max-device-width:500px )" srcset="assets/{{mobile}}">
+            <img
             src="assets/{{imgSrc}}"
             alt="Book's cover"
-            loading="lazy"
-            width="100%"
-            height="300px"
-          />
+            width="300px"
+            height="500px"/>
+          </picture>
+          
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
             <a class="a2a_button_facebook"></a>
@@ -63,10 +84,10 @@
       <a class="a2a_button_whatsapp"></a>
     </div>
   </footer>
-  <script async defer src="https://static.addtoany.com/menu/page.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
-  <script src="assets/articles.js"></script>
-  <script src="main.js"></script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+  <script defer src="assets/articles.js"></script>
+  <script defer src="main.js"></script>
 </body>
 
 </html>

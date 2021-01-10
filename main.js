@@ -47,4 +47,6 @@ if (document.getElementById('article-details')) {
 }
 
 //RANDOM BACKGROUND
-document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
+if (screen.width > 500) {
+    document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
+}
