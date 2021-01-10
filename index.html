@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
   <title>Elisan blogi</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel=" stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" media="all"/>
+  <link rel=" stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" media="all" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap"
     rel="stylesheet prefetch" />
@@ -35,8 +36,8 @@
       font-family: "Raleway", sans-serif;
     }
   </style>
-
 </head>
+
 <body class="w3-content">
   <header class="w3-container w3-center w3-padding-32 w3-text-white">
     <h1><strong>Elisan Antologia</strong></h1>
@@ -55,15 +56,23 @@
                     Viimeisin merkintä
                   </strong>
                 </h2>
-                <picture>
-                  <source media="(max-device-width:500px )" srcset="assets/{{mobile}}">
-                  <img
-                  src="assets/{{imgSrc}}"
-                  alt="Book's cover"
-                  width="300px"
-                  height="500px"/>
-                </picture>
-                
+                <figure class="w3-display-container">
+                  <picture>
+                    <source
+                      media="(max-device-width:500px )"
+                      srcset="assets/{{mobile}}"
+                    />
+                    <img oncontextmenu="false"
+                      src="assets/{{imgSrc}}"
+                      alt="Book's cover"
+                      width="300px"
+                      height="500px"
+                    />
+                  </picture>
+                  <figcaption class="w3-display-bottomright w3-tag">
+                    {{imageComment}}
+                  </figcaption>
+                </figure>
                 <div class="w3-container">
                   <h3>
                     {{title}}
@@ -138,6 +147,7 @@
                       loading="lazy"
                       width="100px"
                       height="250px"
+                      oncontextmenu="false"
                     />
                     <h3 class="w3-large">
                       {{title}}
