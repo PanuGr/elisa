@@ -57,18 +57,13 @@
                   </strong>
                 </h2>
                 <figure class="w3-display-container">
-                  <picture>
-                    <source
-                      media="(max-device-width:500px )"
-                      srcset="assets/{{mobile}}"
-                    />
-                    <img oncontextmenu="false"
+                  <img oncontextmenu="false"
                       src="assets/{{imgSrc}}"
                       alt="Book's cover"
                       width="300px"
                       height="500px"
-                    />
-                  </picture>
+                  srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w" sizes="100vw"
+                />
                   <figcaption class="w3-display-bottomright w3-tag">
                     {{imageComment}}
                   </figcaption>
