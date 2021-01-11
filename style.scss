@@ -28,9 +28,13 @@ a:hover {
   object-fit: contain;
   object-position: center;
 }
-li {
-  img {
-    width: 10%;
-    max-height: 50px;
+ul {
+  overflow-y: scroll;
+  height: 300px;
+  li {
+    img {
+      width: 10%;
+      max-height: 50px;
+    }
   }
 }
