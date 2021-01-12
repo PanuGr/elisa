@@ -57,13 +57,27 @@
                   </strong>
                 </h2>
                 <figure class="w3-display-container">
-                  <img oncontextmenu="false"
+                  <picture>
+                    <source
+                      srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w"
+                      type="image/webp"
+                    />
+                    <source srcset="assets/{{safari}}" type="image/jpeg" />
+                    <img
+                      oncontextmenu="false"
                       src="assets/{{imgSrc}}"
                       alt="Book's cover"
                       width="300"
                       height="500"
-                  srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w, assets/{{safari}} 1000w "
-                />
+                    />
+                  </picture>
+                  <!-- <img oncontextmenu="false"
+                      src="assets/{{imgSrc}}"
+                      alt="Book's cover"
+                      width="300"
+                      height="500"
+                  srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w"
+                /> -->
                   <figcaption class="w3-display-bottomright w3-tag">
                     {{imageComment}}
                   </figcaption>
@@ -147,8 +161,8 @@
                     <h3 class="w3-large">
                       {{title}}
                     </h3>
-                   
-                  </a> <!-- <p class="w3-inline">{{date}} </p> -->
+                  </a>
+                  <!-- <p class="w3-inline">{{date}} </p> -->
                 </li>
               {{/each}}
             </script>
