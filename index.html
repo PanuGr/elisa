@@ -149,7 +149,13 @@
               {{#each writings}}
                 <li class="w3-padding-16">
                   <a href="articles.html?id={{@index}}">
-                    <img
+                    <picture>
+                      <source
+                        srcset="assets/{{imageSmall}}"
+                        type="image/webp"
+                      />
+                      <source srcset="assets/{{safari}}" type="image/jpeg" />
+                      <img
                       src="assets/{{imageSmall}}"
                       alt="Image"
                       class="w3-left w3-margin-right w3-image"
@@ -158,6 +164,7 @@
                       height="250"
                       oncontextmenu="false"
                     />
+                    </picture>
                     <h3 class="w3-large">
                       {{title}}
                     </h3>

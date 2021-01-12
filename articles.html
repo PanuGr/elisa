@@ -53,13 +53,20 @@
     <script id="template" type="text/x-handlebars-template">
         <article class="w3-card-4 w3-padding w3-sand">
           <figure class="w3-display-container">
-            <img oncontextmenu="false"
+            <picture>
+              <source
+                srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w"
+                type="image/webp"
+              />
+              <source srcset="assets/{{safari}}" type="image/jpeg" />
+              <img
+                oncontextmenu="false"
                 src="assets/{{imgSrc}}"
                 alt="Book's cover"
-                width="300px"
-                height="500px"
-            srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w" sizes="100vw"
-          />
+                width="300"
+                height="500"
+              />
+            </picture>
             <figcaption class="w3-display-bottomright w3-tag">
               {{imageComment}}
             </figcaption>
