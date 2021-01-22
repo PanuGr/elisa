@@ -53,24 +53,18 @@
     <script id="template" type="text/x-handlebars-template">
         <article class="w3-card-4 w3-padding w3-sand">
           <figure class="w3-display-container">
-            <picture>
-              <source
-                srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w"
-                type="image/webp"
-              />
-              <source srcset="assets/{{safari}}" type="image/jpeg" />
-              <img
-                oncontextmenu="false"
-                src="assets/{{imgSrc}}"
-                alt="Book's cover"
-                width="300"
-                height="500"
-              />
-            </picture>
-            <figcaption class="w3-display-bottomright w3-tag">
-              {{imageComment}}
-            </figcaption>
-          </figure>
+            <img
+              oncontextmenu="false"
+              src="{{imgSrc}}"
+              alt="Book's cover"
+              width="300"
+              height="300"
+              srcset="{{imgSrc}}, {{imageSmall}} 500w"
+            />
+          <figcaption class="w3-display-bottomright w3-tag">
+            {{imageComment}}
+          </figcaption>
+        </figure>
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
             <a class="a2a_button_facebook"></a>

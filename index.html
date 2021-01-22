@@ -38,7 +38,7 @@
   </style>
 </head>
 
-<body class="w3-content">
+<body>
   <header class="w3-container w3-center w3-padding-32 w3-text-white">
     <h1><strong>Elisan Antologia</strong></h1>
     <p>Tervetuloa <span class="w3-tag">Elisan Stenbergin</span> blogiin</p>
@@ -57,20 +57,14 @@
                   </strong>
                 </h2>
                 <figure class="w3-display-container">
-                  <picture>
-                    <source
-                      srcset="assets/{{imgSrc}}, assets/{{imageSmall}} 540w"
-                      type="image/webp"
-                    />
-                    <source srcset="assets/{{safari}}" type="image/jpeg" />
                     <img
                       oncontextmenu="false"
-                      src="assets/{{imgSrc}}"
+                      src="{{imgSrc}}"
                       alt="Book's cover"
                       width="300"
-                      height="500"
+                      height="300"
+                      srcset="{{imgSrc}}, {{imageSmall}} 500w"
                     />
-                  </picture>
                   <figcaption class="w3-display-bottomright w3-tag">
                     {{imageComment}}
                   </figcaption>
@@ -107,15 +101,8 @@
     <section class="w3-col l4">
       <!-- About Card -->
       <div class="w3-card w3-margin w3-margin-top w3-sand">
-        <picture>
-          <source
-            srcset="./assets/profileSmaller.webp"
-            type="image/webp"
-          />
-          <source srcset="./assets/profileSmaller.jpg" type="image/jpeg" />
-          <img class="w3-circle w3-margin" id="profilePhoto" src="./assets/profileSmaller.webp"
+          <img class="w3-circle w3-margin" id="profilePhoto" src="https://ik.imagekit.io/panugr/elisa/profilePhoto"
           alt="Elisa Stenberg, profile photo" width="100" height="250" oncontextmenu="false" loading="lazy" />
-        </picture>
         <div class="w3-container w3-sand">
           <h4><strong>Elisa Stenberg</strong></h4>
           <p>
@@ -133,7 +120,7 @@
             Jamilahti folk-high school as well as in the Työväen Academy of
             Kauniainen. I have also written the play
             <em> "Me and Hugo Simberg"</em>, which was presented in Hamina
-            Hywät Wanhat asukkaat in the spring of 2013. Furthemore my texts
+            Hywät Wanhat asukkaat in the spring of 2013. Furthermore, my texts
             have been in a few magazines. I hope you enjoy my writings!
           </p>
         </div>
@@ -149,22 +136,15 @@
               {{#each writings}}
                 <li class="w3-padding-16">
                   <a href="articles.html?id={{@index}}">
-                    <picture>
-                      <source
-                        srcset="assets/{{imageSmall}}"
-                        type="image/webp"
-                      />
-                      <source srcset="assets/{{safari}}" type="image/jpeg" />
                       <img
-                      src="assets/{{imageSmall}}"
-                      alt="Image"
+                      src="{{thumbnail}}"
+                      alt="Book's cover"
                       class="w3-left w3-margin-right w3-image"
                       loading="lazy"
                       width="100"
                       height="250"
                       oncontextmenu="false"
                     />
-                    </picture>
                     <h3 class="w3-large">
                       {{title}}
                     </h3>
@@ -188,6 +168,13 @@
       <a class="a2a_button_linkedin"></a>
       <a class="a2a_button_copy_link"></a>
     </div>
+    <a
+        href="https://panagiotis.netlify.app"
+        target="blank"
+        noreferrer
+        class="w3-block w3-small w3-center"
+        >by Panagiotis, Front-End developer</a
+      >
   </footer>
   <script async src="https://static.addtoany.com/menu/page.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
