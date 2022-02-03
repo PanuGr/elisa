@@ -1,12 +1,21 @@
-const backgroundUrl = [
-    "felipe.webp", 'annie.webp', 'evie.webp',
-    'joceline.webp', 'oleksandra.webp', 'pawel.webp',
-    'priscilla.webp', 'priscilla1.webp', 'priscilla2.webp',
-    'priscilla3.webp', 'zoltan.webp'
-];
-const randomNum = () => {
-    return Math.floor(Math.random() * backgroundUrl.length)
+const getPhoto = async () => {
+    try {
+        const response = await fetch('https://source.unsplash.com/random/1920x1080?flowers');
+        const photo = await response.url;
+        return photo;
+    } catch (error) {
+        console.error(error);
+    }
+};
+//RANDOM BACKGROUND
+if (screen.width > 500) {
+    getPhoto().then(photo => {
+        ;
+        document.body.style.background = `url( ${photo}) no-repeat center fixed`;
+    });
 }
+
+
 
 //HANDLEBARS
 const queryString = window.location.search;
@@ -44,9 +53,4 @@ if (document.getElementById('article-details')) {
     a2a_config.linkurl = location.href
     document.querySelector('meta[name="description"]').setAttribute("content", `Täältä voit lukea kirjoitukseni nimeltään: ${content.writings[articleID].title}`);
     document.querySelector('meta[name="image"]').setAttribute("content", `assets/${content.writings[articleID].imgSrc}`);
-}
-
-//RANDOM BACKGROUND
-if (screen.width > 500) {
-    document.getElementsByTagName('body')[0].style.backgroundImage = `url(./assets/background/${backgroundUrl[randomNum()]} ) `
 }
