@@ -5,7 +5,6 @@ body {
   background-size: cover;
   min-height: 100dvh;
   display: grid;
- 
 }
 
 header {
@@ -18,14 +17,10 @@ header {
 
 main {
   display: grid;
+  justify-items: center;
 }
 
 img {
-  /*   max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  object-position: center; */
   pointer-events: none;
 }
 
@@ -41,7 +36,7 @@ ul {
 ul li {
   text-align: center;
   & img {
-    width: 50%;
+    width: 20%;
   }
 }
 
@@ -50,6 +45,9 @@ ul li {
     background-image: url("./assets/background-high.webp");
     & main {
       grid-template-columns: 2fr 1fr;
+    }
+    & li img {
+      width: 50%;
     }
   }
 }
